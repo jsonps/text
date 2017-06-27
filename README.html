@@ -1,0 +1,436 @@
+
+<!doctype html>
+<html>
+    <head>
+		<!--声明当前页面的编码集：国际编码（utf-8）-->
+		<meta http-equiv="Content-Type" content="text/html"charset="UTF-8">
+		<title>阿里通，通天下 — 好用的免费网络电话</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+
+		<!--css/js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"微软雅黑";}
+			/*header start*/
+			.header{width:100%;height:100px;border-bottom:1px solid #f7f7f7;z-index:999;}
+			.header .h_con{width:1000px;height:83px;margin:0 auto;}
+			.header .h_con .h_logo{width:400px;height:83px;float:left;}
+			.header .h_con .h_logo img{margin-top:16px;}
+			.header .h_con .h_sp{width:590px;height:65px;float:right;margin-top:10px;}
+			.header .h_con .h_sp .h_top_c{margin-top:15px;float:right;font-size:13px;}
+			.header .h_con .h_sp .h_top_c .h_reg{margin-right:15px;}
+			.header .h_con .h_sp .h_top_c .h_reg a{text-decoration:none;color:#000;}
+			.header .h_con .h_sp .h_top_c .h_log{border-left:1px dotted #000;padding-left:15px;}
+			.header .h_con .h_sp .h_top_c .h_log a{text-decoration:none;color:#000;}
+			.header .h_con .h_sp .h_top_c a:hover{border-bottom:2px solid #00b0f0;padding-bottom:2px;color:#00b0f0}
+			/*h_top_c和h_link都float:right但是不能上下布局，这时需要清除浮动*/
+			.clear{clear:both;}
+			.header .h_con .h_sp .h_link{float:right;margin-top:10px;}
+			.header .h_con .h_sp .h_link a{font-size:16px;text-decoration:none;color:#474747;margin-left:35px;}
+			.header .h_con .h_sp .h_link a:hover{border-bottom:2px solid #00b0f0;padding-bottom:2px;color:#00b0f0}
+			.header .h_con .h_sp .h_link .h_active{border-bottom:2px solid #00b0f0;padding-bottom:2px;color:#00b0f0}
+			.fix{
+				position:fixed;
+				background:#fff;
+				border-bottom:1px solid #f7f7f7;
+				top:0;
+			}
+			/*end header*/
+			/*slideDiv start*/
+			.slideDiv{width:100%;height:620px;}
+			.slideDiv .s_banner{width:100%;height:620px;background:url(images/banner0.jpg)no-repeat top center;background-size:cover;}
+			.slideDiv .s_banner .s_layout{width:1000px;margin:0 auto;}
+			.slideDiv .s_banner .s_layout .s_text{font-size:60px;text-align:center;padding-top:60px;color:#3e3a39;letter-spacing:10px;}
+			.slideDiv .s_banner .s_layout a{width:320px;height:84px;display:block;text-decoration:none;font-size:40px;line-height:84px;text-align:center;color:#1db4f6;letter-spacing:2px;border:1px solid #1db4f6;margin:30px auto 0;border-radius:13px;}
+			.slideDiv .s_banner .s_layout a:hover{color:#3e3a39;border:1px solid #3e3a39;}
+			/*end slideDiv*/
+			/*page0 start*/
+			.page0{width:100%;height:147px;position:relative;}
+			.page0 img{position:absolute;top:50px;left:50%;margin-left:-233px;}
+			/*end page0*/
+			/*activebg start*/
+			.activebg{width:100%;height:600px;background-repeat:no-repeat;background-attachment:fixed;/*要给元素添加data-stellar-background-ratio属性，所以还要设置background-attachment: fixed;*/}
+			/*end activebg*/
+			/*fisrtbg start*/
+			.fisrtbg{background-image:url("images/1.jpg");background-size:cover;}
+			/*end fisrtbg*/
+			/*page1 start*/
+			.page1{width:100%;height:585px;}
+			.page1 .p_layout{width:1000px;height:585px;margin:0 auto;}
+			.page1 .p_layout .p_left{margin-top:50px;float:left;}
+			.page1 .p_layout .p_right{margin-top:85px;float:right;text-align:right;}
+			.page1 .p_layout .p_right h1{font-size:48px;color:#333;letter-spacing:2px;font-weight:normal;}
+			.page1 .p_layout .p_right h5{font-size:18px;color:#454343;margin-bottom:8px;letter-spacing:1px;    font-weight:normal;}
+			.page1 .p_layout .p_right .p_h5{margin-top:40px;}
+			.page1 .p_layout .p_right p{margin-top:30px;}
+			.page1 .p_layout .p_right p a{text-decoration:none;font-size:18px;color:#17bbef;}
+			.page1 .p_layout .p_right .p_descimg{margin-top:40px;}
+			/*end page1*/
+			/*secondbg start*/
+			.secondbg{background-image:url("images/2.jpg");background-size:cover;}
+			/*end secondbg*/
+			/*page2 start*/
+			.page2{width:100%;height:585px;}
+			.page2 .p_layout{width:1000px;height:585px;margin:0 auto;}
+			.page2 .p_layout .p_left{margin-top:85px;float:left;text-align:left;}
+			.page2 .p_layout .p_left h1{font-size:48px;color:#333;letter-spacing:2px;font-weight:normal;}
+			.page2 .p_layout .p_left h5{font-size:18px;color:#454343;margin-bottom:8px;letter-spacing:1px;    font-weight:normal;}
+			.page2 .p_layout .p_left .p_h5{margin-top:40px;}
+			.page2 .p_layout .p_left p{margin-top:30px;}
+			.page2 .p_layout .p_left p a{text-decoration:none;font-size:18px;color:#17bbef;}
+			.page2 .p_layout .p_left .p_descimg{margin-top:40px;}
+			.page2 .p_layout .p_right{margin-top:50px;float:right;}
+			/*end page2*/
+			/*threebg start*/
+			.threebg{background-image:url("images/3.jpg");background-size:cover;}
+			/*end threebg*/
+			/*page3 start*/
+			.page3{width:100%;height:585px;}
+			.page3 .p_layout{width:1000px;height:585px;margin:0 auto;position:relative;}
+			.page3 .p_layout .p_left{margin-top:52px;margin-left:-100px;float:left;}
+			.page3 .p_layout .p_right{margin-top:85px;float:none;text-align:right;position:absolute;right:0;}
+			.page3 .p_layout .p_right h1{font-size:48px;color:#333;letter-spacing:2px;font-weight:normal;}
+			.page3 .p_layout .p_right h5{font-size:18px;color:#454343;margin-bottom:8px;letter-spacing:1px;    font-weight:normal;}
+			.page3 .p_layout .p_right .p_h5{margin-top:40px;}
+			.page3 .p_layout .p_right p{margin-top:30px;}
+			.page3 .p_layout .p_right p a{text-decoration:none;font-size:18px;color:#17bbef;}
+			.page3 .p_layout .p_right .p_descimg{margin-top:40px;}
+			/*end page3*/
+			/*fourthbg start*/
+			.fourthbg{background-image:url("images/4.jpg");background-size:cover;}
+			/*end fourthbg*/
+			/*page4 start*/
+			.page4{width:100%;height:585px;}
+			.page4 .p_layout{width:1000px;height:585px;margin:0 auto;position:relative;}
+			.page4 .p_layout .p_left{margin-top:100px;float:left;text-align:left;}
+			.page4 .p_layout .p_left h1{font-size:48px;color:#333;letter-spacing:2px;font-weight:normal;}
+			.page4 .p_layout .p_left h5{font-size:18px;color:#454343;margin-bottom:8px;letter-spacing:1px;    font-weight:normal;}
+			.page4 .p_layout .p_left .p_h5{margin-top:40px;}
+			.page4 .p_layout .p_right{float:none;position:absolute;right:-200px;top:250px;z-index:2;}
+			/*end page4*/
+			/*sixbg start*/
+			.sixbg{width:100%;height:950px;background:url("images/6.jpg")no-repeat center center;}
+			.sixbg .s_layout{widht:1000px;height:950px;margin:0 auto;position:relative;}
+			.sixbg .s_layout h1{font-size:48px;color:#000;text-align:center;padding-top:450px;margin-bottom:40px;font-weight:normal;}
+			.sixbg .s_layout h5{font-size:18px;text-align:center;color:#454343;margin-bottom:8px;font-weight:normal;}
+			.sixbg .s_layout a{width:432px;height:149px;display:block;text-align:center;line-height:149px;font-size:48px;text-decoration:none;border:1px solid #000;border-radius:20px;color:#000;position:absolute;left:50%;margin-left:-216px;bottom:120px;    letter-spacing:2px;}
+			.sixbg .s_layout a:hover{background:#00aff0;color:#fff;border:1px solid #00aff0;}
+			/*end sixbg*/
+			/*news start*/
+			.news{width:100%;height:280px;}
+			.news .n_layout{width:1000px;height:280px;margin:0 auto;}
+			.news .n_layout dl{width:332px;height:171px;float:left;border-left:1px dashed #9b9b9b;margin-top:50px;position:relative;}
+			.news .n_layout dl dt{width:315px;height:35px;font-size:26px;margin-bottom:20px;padding-left:17px;}
+			.news .n_layout dl dt a {width:22px;height:21px;display:block;background:url("images/arrow.png")no-repeat center center;position:absolute;right:50px;top:10px;}
+			.news .n_layout dl dt a:hover{background:url("images/arrow2.png")no-repeat center center;}
+			.news .n_layout dl dd{font-size:14px;margin-bottom:10px;padding-left:17px;}
+			.news .n_layout dl dd a{text-decoration:none;color:#727171;}
+			.news .n_layout dl dd a:hover{text-decoration:underline;color:#00aff0;}
+			.news .n_layout .n_lastdl{border-right:1px dashed #9b9b9b;}
+			/*end news*/
+			/*footer start*/
+			.footer{width:100%;height:430px;}
+			.footer .f_layout{width:1000px;height:430px;color:#727171;margin:0 auto;}
+			.footer .f_layout .f_top{width:1000px;height:267px;border-bottom:1px solid #dfdfdf;}
+			.footer .f_layout .f_top dl{width:200px;height:176px;float:left;text-align:left;margin-top:60px;}
+			.footer .f_layout .f_top dl dd{margin-bottom:25px;}
+			.footer .f_layout .f_top dl a{font-size:14px;text-decoration:none;color:#888;}
+			.footer .f_layout .f_top dl a:hover{color:#000;}
+			.footer .f_layout .f_top .f_side{float:right;width:130px;height:149px;margin-right:20px;margin-top:60px;text-align:center;color:#888;}
+			.footer .f_layout .f_top .f_side h3{font-size:20px;}
+			.footer .f_layout .f_top .f_side h1{font-size:36px;margin:5px auto 0;}
+			.footer .f_layout .f_top .f_side h4{font-size:14px;margin-bottom:15px;}
+			.footer .f_layout .f_top .f_side h5{font-size:12px;margin-top:5px;}
+			.footer .f_layout .f_center{width:1000px;height:21px;margin:30px auto;position:relative;}
+			.footer .f_layout .f_center ul{color:#c9caca;margin-left:95px;}
+			.footer .f_layout .f_center ul span{position:absolute;top:0;left:30px;font-size:13px;}
+			.footer .f_layout .f_center ul li{list-style:none;float:left;margin:auto 3px;border-right:1px solid #e3e3e3;padding-right:6px;}
+			.footer .f_layout .f_center ul li a{text-decoration:none;color:#c9caca;font-size:13px;}
+			.footer .f_layout .f_center ul li a:hover{text-decoration:underline;}
+			.footer .f_layout .f_center .f_link{width:20px;height:11px;display:inline-block;background:url("images/link-arrow.png")no-repeat center center;background-position:0 0;border:none;margin-left:5px;margin-top:2px;cursor:pointer;}
+			.footer .f_layout .f_center .f_link:hover{background-position:0 -12px;}
+			.footer .f_layout .f_bottom{width:1000px;height:62px;}
+			.footer .f_layout .f_bottom .f_logo{float:left;margin-left:280px;}
+			.footer .f_layout .f_bottom .f_text{float:left;margin-left:10px;margin-top:2px;color:#939393}
+			.footer .f_layout .f_bottom .f_text a{text-decoration:none;color:#939393;}
+			/*end footer*/
+		</style>
+    </head>
+
+ <body>
+	<!--header start-->
+	<div class="header">
+		<div class="h_con">
+			<a href="#" class="h_logo">
+				<img src="images/logo.png" alt="AliCall" width="223" height="67" />
+			</a>
+			<span class="h_sp">
+				<div class="h_top_c">
+					<span class="h_reg"><a href="#">快速注册</a></span>
+					<span class="h_log"><a href="#">登陆</a></span>
+				</div>
+				<div class="clear"></div>
+				<div class="h_link">
+					<a href="#" class="h_active">首页</a>
+					<a href="#">下载</a>
+					<a href="#">充值</a>
+					<a href="#">资费标准</a>
+					<a href="#">新闻公告</a>
+					<a href="#">代理合作</a>
+					<a href="#">帮助</a>
+				</div>
+			</span>
+		</div>
+	</div>
+	<!--end header-->
+
+	<!--slideDiv start-->
+	<div class="slideDiv">
+		<div class="s_banner">
+			<div class="s_layout">
+				<div class="s_text">十年<span>,</span>连接更远的世界</div>
+				<a href="#">立即下载</a>
+			</div>
+		</div>
+	</div>
+	<!--end slideDiv-->
+
+	<!--page0 start-->
+	<div class="page0">
+		<img src="images/page0.png" alt="" width="466" height="41" />
+	</div>
+	<!--end page0-->
+
+	<!--fisrtbg start-->
+	<div class="activebg fisrtbg" data-stellar-background-ratio="0.03" >
+	</div>
+	<!--end fisrtbg-->
+
+	<!--page1 start-->
+	<div class="page1">
+		<div class="p_layout">
+			<div class="p_left">
+				<img src="images/d1-ios.jpg" alt="" width="335" height="534"/>
+			</div>
+			<div class="p_right">
+				<h1>不能常见面</h1>
+				<h1>别忘了打电话说声想你</h1>
+				<h5 class="p_h5">阿里通用更清晰的通话，更简便的操作</h5>
+				<h5>传递着亲人、朋友、恋人的每一声问候、每一份关怀</h5>
+				<p>
+					<a href="#">了解更多&nbsp;&gt;</a>
+				</p>
+				<div class="p_descimg">
+					<img src="images/d1-desc.jpg" alt="" width="323" height="95" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end page1-->
+
+	<!--secondbg start-->
+	<div class="activebg secondbg" data-stellar-background-ratio="0.05" >
+	</div>
+	<!--end secondbg-->
+
+	<!--page2 start-->
+	<div class="page2">
+		<div class="p_layout">
+			<div class="p_left">
+				<h1>跨越千山万水</h1>
+				<h1>只为连接最重要的人</h1>
+				<h5 class="p_h5">无论身在何地，你都能轻松享受阿里通带来的高清通话</h5>
+				<h5>低至0.1元/分钟的国际话费，和更低费率的国内通话</h5>
+				<p>
+					<a href="#">了解更多&nbsp;&gt;</a>
+				</p>
+				<div class="p_descimg">
+					<img src="images/d2-desc.jpg" alt="" width="324" height="94" />
+				</div>
+			</div>
+			<div class="p_right">
+				<img src="images/d2-ios.jpg" alt="" width="284" height="540"/>
+			</div>
+		</div>
+	</div>
+	<!--end page2-->
+
+	<!--threebg start-->
+	<div class="activebg threebg" data-stellar-background-ratio="0.1" >
+	</div>
+	<!--end threebg-->
+
+	<!--page3 start-->
+	<div class="page3">
+		<div class="p_layout">
+			<div class="p_left">
+				<img src="images/d3-ios.jpg" alt="" width="671" height="448"/>
+			</div>
+			<div class="p_right">
+				<h1>世界纷纷扰扰</h1>
+				<h1>爱的声音依旧清晰</h1>
+				<h5 class="p_h5">生活在这个喧闹世界，有太多的声音被淹没</h5>
+				<h5>但只要想念的时候，你就能听到电话那头的亲切声音</h5>
+				<p>
+					<a href="#">了解更多&nbsp;&gt;</a>
+				</p>
+				<div class="p_descimg">
+					<img src="images/d3-desc.png" alt="" width="602" height="88" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end page3-->
+
+	<!--fourthbg start-->
+	<div class="activebg fourthbg" data-stellar-background-ratio="0.1" >
+	</div>
+	<!--end fourthbg-->
+
+	<!--page4 start-->
+	<div class="page4">
+		<div class="p_layout">
+			<div class="p_left">
+				<h1>和你一样</h1>
+				<h1>阿里通从未停止前进</h1>
+				<h5 class="p_h5">从2006年开始，阿里通就一直重视用户的通话体验</h5>
+				<h5>10年来，每一代产品的更新，每一次线路的整合</h5>
+				<h5>阿里通都在不断进步。</h5>
+			</div>
+			<div class="p_right">
+				<img src="images/d4-ios.png" alt="" width="757" height="208"/>
+			</div>
+		</div>
+	</div>
+	<!--end page4-->
+
+	<!--sixbg start-->
+	<div class="sixbg">
+		<div class="s_layout">
+			<h1>与9000+万用户一起传递爱</h1>
+			<h5>截至2015年上半年统计，已有超过90,000,000用户注册阿里通</h5>
+			<h5>通话时间超过7,200,000小时</h5>
+			<a href="#">立即下载</a>
+		</div>
+	</div>
+	<!--end sixbg-->
+
+	<!--news start-->
+	<div class="news">
+		<div class="n_layout">
+			<dl>
+				<dt>官方公告<a href="#"></a></dt>
+				<dd><a href="#">2016Chinajoy：阿里通首秀圆满收官</a></dd>
+				<dd><a href="#">双倍积分，双倍爱你</a></dd>
+				<dd><a href="#">阿里通“通话录音”新功能，支持IOS和安卓</a></dd>
+				<dd><a href="#">【亲情电话券】不能常回家，但能常打电话回家</a></dd>
+			</dl>
+			<dl>
+				<dt>媒体报道<a href="#"></a></dt>
+				<dd><a href="#">让移动通信瞬间“满格”,巧选网络电话</a></dd>
+				<dd><a href="#">更便宜!阿里通告诉你“网上怎么充话费”</a></dd>
+				<dd><a href="#">关注G20杭州峰会,网络电话引领国际化通信</a></dd>
+				<dd><a href="#">开学第一课成热词,网络电话倡导亲情教育</a></dd>
+			</dl>
+			<dl class="n_lastdl">
+				<dt>帮助中心<a href="#"></a></dt>
+				<dd><a href="#">网络电话是什么</a></dd>
+				<dd><a href="#">为什么使用阿里通网络电话 </a></dd>
+				<dd><a href="#">如何免费体验阿里通网络电话  </a></dd>
+				<dd><a href="#">什么是直拨，什么是回拨  </a></dd>
+			</dl>
+		</div>
+	</div>
+	<!--end news-->
+
+	<!--footer start-->
+	<div class="footer">
+		<div class="f_layout">
+			<div class="f_top">
+				<dl>
+					<dd><a href="#">关于我们</a></dd>
+					<dd><a href="#">加入我们</a></dd>
+					<dd><a href="#">代理加盟</a></dd>
+					<dd><a href="#">网站地图</a></dd>
+				</dl>
+				<dl>
+					<dd><a href="#">代理商登录</a></dd>
+					<dd><a href="#">解决方案</a></dd>
+					<dd><a href="#">充值中心</a></dd>
+					<dd><a href="#">资费标准</a></dd>
+				</dl>
+				<dl>
+					<dd><a href="#">阿里通商城</a></dd>
+					<dd><a href="#">阿里通联盟</a></dd>
+					<dd><a href="#">阿里通论坛</a></dd>
+					<dd><a href="#">新闻资讯</a></dd>
+				</dl>
+				<dl>
+					<dd><a href="#">帮助中心</a></dd>
+					<dd><a href="#">软件下载</a></dd>
+					<dd><a href="#">意见反馈</a></dd>
+				</dl>
+				<div class="f_side">
+					<h3>免费客服电话</h3>
+					<h1>80000</h1>
+					<h4>（限阿里通拨打）</h4>
+					<h5>工作日：08:30--21:30</h5>
+					<h5>节假日：09:00--18:30</h5>
+				</div>
+			</div>
+			<div class="f_center">
+				<ul>
+					<span>友情链接：</span>
+					<li><a href="#">多牛网 </a></li>
+					<li><a href="#">eNet硅谷动力</a></li>
+					<li><a href="#">济南百姓网</a></li>
+					<li><a href="#"> 移动通信网</a></li>
+					<li><a href="#">路由器之家</a></li>
+					<li><a href="#">驱动精灵</a></li>
+					<li><a href="#">软件街下载 </a></li>
+					<li><a href="#">网络电话代理</a></li>
+					<li><a href="#">电话订火车票</a></li>
+					<li><a href="#">仓库管理软件</a></li>
+					<li class="f_link"></li>
+				</ul>
+			</div>
+			<div class="f_bottom">
+				<div class="f_logo">
+					<img src="images/logo-s.png" alt="f_logo" width="40" height="40" />
+				</div>
+				<div class="f_text">
+					<div>&copy;&nbsp;2007-2016&nbsp;阿里通科技有限公司&nbsp;&nbsp;授权</div>
+					<div>深圳市聚英达科技发展有限公司&nbsp;运营&nbsp;<a href="#">粤ICP备14003895号-3</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end footer-->
+ 
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			/*
+				data-stellar-background-ratio="0.5"意味着改变速度为自然滚动速度的一半。 如果想使这个属性值低于1，建议在样式表里设置background-attachment: fixed;
+				第一个普通选项是设置效果的方向。 经典的滚动效果是从上到下，或者反过来。也可以指定一个从左到右的效果，或者反过来。 通过设置horizontalScrolling 和verticalScrolling的bool值完成。 其默认值是true。
+				选项responsive。 它是用来指定load或resize事件触发时，是否刷新页面。 默认是false
+			
+			$.stellar({horizontalScrolling:false,responsive:true});
+			*/
+			var headerTop = $(".header").offset().top;
+			//alert(headerTop);
+			$(window).scroll(function(){ //window发生滚动事件
+				var scrollTop = $(document).scrollTop();
+				if(scrollTop>headerTop){
+					$(".header").addClass("fix");
+				}else{
+					$(".header").removeClass("fix");
+				}
+			});
+		})
+	</script>
+ </body>
+</html>
